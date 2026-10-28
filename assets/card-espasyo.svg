@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" width="100%" height="140">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 145" width="100%" height="145">
   <defs>
     <style>
       .bg { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1.5; }
-      .tag { fill: #16a34a; font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; }
-      .title { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700; }
-      .item { fill: #334155; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; }
+      .tag { fill: #16a34a; font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; }
+      .title { fill: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; }
+      .item { fill: #334155; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; }
       .pill { fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
       .accent { fill: #16a34a; }
 
@@ -19,20 +19,20 @@
     </style>
   </defs>
 
-  <rect class="bg" x="1" y="1" width="418" height="138" rx="10" />
+  <rect class="bg" x="1" y="1" width="418" height="143" rx="10" />
 
   <!-- Tag Pill -->
-  <g transform="translate(20, 18)">
-    <rect class="pill" x="0" y="0" width="175" height="20" rx="10" />
-    <circle class="accent" cx="10" cy="10" r="3" />
-    <text class="tag" x="18" y="13.5">LOCAL-FIRST MOBILE</text>
+  <g transform="translate(20, 16)">
+    <rect class="pill" x="0" y="0" width="190" height="22" rx="11" />
+    <circle class="accent" cx="11" cy="11" r="3.5" />
+    <text class="tag" x="20" y="15">LOCAL-FIRST MOBILE</text>
   </g>
 
   <!-- Title -->
-  <text class="title" x="20" y="60">Offline-First Retail Ledger</text>
+  <text class="title" x="20" y="62">Offline-First Retail Ledger</text>
 
   <!-- Highlights -->
-  <text class="item" x="20" y="84"><tspan class="accent">•</tspan> Flutter, Dart, SQLite, BLoC Architecture</text>
-  <text class="item" x="20" y="103"><tspan class="accent">•</tspan> 53 Passing Tests (automated test suite)</text>
-  <text class="item" x="20" y="122"><tspan class="accent">•</tspan> Real-time vacancy audit &amp; seller payouts</text>
+  <text class="item" x="20" y="88"><tspan class="accent">•</tspan> Flutter, Dart, SQLite, BLoC Architecture</text>
+  <text class="item" x="20" y="108"><tspan class="accent">•</tspan> 53 Passing Tests (automated test suite)</text>
+  <text class="item" x="20" y="128"><tspan class="accent">•</tspan> Real-time vacancy audit &amp; seller payouts</text>
 </svg>

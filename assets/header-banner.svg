@@ -39,7 +39,7 @@
 
   <!-- Role Badge -->
   <g transform="translate(56, 36)">
-    <rect class="pill-bg" x="0" y="0" width="460" height="24" rx="12" />
+    <rect class="pill-bg" x="0" y="0" width="550" height="24" rx="12" />
     <circle class="dot" cx="12" cy="12" r="3.5" />
     <text class="pill-text" x="24" y="16">ASSOCIATE SOFTWARE DEVELOPER · ENTERPRISE JAVA &amp; OFFLINE-FIRST SYSTEMS</text>
   </g>
