@@ -1,63 +1,46 @@
-<div align="center">
+<a href="https://jiggy-portfolio.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
+    <img src="assets/hero-light.png" alt="I build JRF and maintain Viajero ERP. Also offline Flutter apps and LED race clocks, from General Santos City. Beside it, the JRF request stream: raw requests resolving into job states, one retried after a 409." width="100%">
+  </picture>
+</a>
 
-<img src="assets/header-banner.svg" alt="Jiggy B. Palconit - Associate Software Developer" width="100%" />
+# Jiggy B. Palconit
 
-<br/>
+Software Developer at Viajero Motorcycles in General Santos City, Philippines. I build JRF, the company's job request system, and maintain its Java ERP. On the side I ship offline Flutter apps and LED race clocks.
 
-**[Portfolio Website](https://jiggy-portfolio.vercel.app)** &nbsp;•&nbsp; **[Resume (PDF)](https://jiggy-portfolio.vercel.app/resume.pdf)** &nbsp;•&nbsp; **[Get in Touch](mailto:jigspals025@gmail.com)**
+**[Portfolio](https://jiggy-portfolio.vercel.app)** &nbsp;/&nbsp; **[Resume (PDF)](https://jiggy-portfolio.vercel.app/resume.pdf)** &nbsp;/&nbsp; **[jigspals025@gmail.com](mailto:jigspals025@gmail.com)**
 
-<br/>
+## At Viajero Motorcycles, since February 2026
 
-</div>
+I keep established Java 7/8 Swing modules running for a multi-branch dealership and build new services beside them in Spring Boot.
 
-### Engineering Focus & Architecture
+- **JRF**, a job request workflow in Spring Boot (Java 17) that reads and writes the legacy ERP database. Requests move from Submitted to Completed, and `@Version` optimistic locking means two branches updating the same request cannot overwrite each other.
+- **Apr 2026:** Bioclock actions, attendance logs and Swing document limiters.
+- **Jun 2026:** an accounting bridge between the FACC and ACC modules, with report caching and payroll queues.
+- **Aug 2026:** inventory forecasting, reorder-quantity formulas and QR asset labels.
+- **Oct 2026:** cross-branch transfer guards and the JRF bridge into the ERP.
 
-<p align="center">
-  <img src="assets/card-erp.svg" alt="Enterprise ERP and JRF Bridge" width="32%" />
-  <img src="assets/card-espasyo.svg" alt="Offline-First Retail Ledger" width="32%" />
-  <img src="assets/card-realtime.svg" alt="Real-Time Event Systems" width="32%" />
-</p>
+## Systems I've shipped
 
----
+| System | What it does | Built with | Links |
+| :--- | :--- | :--- | :--- |
+| **Espasyo** | Offline Android ledger for a box-rental shop: vacant boxes, sales per box, seller balances and payouts, local and Google Drive backups | Flutter, Riverpod, Drift (SQLite) | [Code](https://github.com/jiggy025/rent-a-box-sys) |
+| **Race Clock** | Race timer where the operator screen drives the stage LED wall, used at a live race in GenSan | TypeScript, Vite, PWA | [Live](https://race-clock-ten.vercel.app) |
+| **MIS Calendar** | Field-visit scheduler whose database posts a 07:30 summary and same-day alerts to the team's Viber channel | Supabase Postgres, pg_cron, pg_net | [Live](https://codexus-calendar.netlify.app) |
+| **JRF pitch film** | A motion film that walks through the JRF workflow | Remotion, React | [Watch](https://jrf-pitch.vercel.app) |
+| **Langga Loan Tracker** | Mobile ledger for loans and installments | React Native, Expo, Reanimated | [Case study](https://jiggy-portfolio.vercel.app/#work) |
 
-### Production Engineering at Viajero Motorcycles Inc.
+Each one is shown working, screen beside source, on the **[portfolio](https://jiggy-portfolio.vercel.app)**.
 
-*Software Developer &bull; Feb 2026 – Present &bull; General Santos City, Philippines*
+## What I work in
 
-I maintain multi-branch enterprise ERP modules and engineer greenfield microservices bridging into legacy infrastructure with zero production regressions:
+**Backend:** Java 7, 8, 17 and 21, Spring Boot, Swing, Hibernate/JPA, JasperReports<br>
+**Mobile:** Flutter and Dart, React Native with Expo<br>
+**Web:** TypeScript, Vite, Remotion<br>
+**Data:** MySQL, PostgreSQL (Supabase), SQLite
 
-- **Greenfield JRF Microservice:** Built a standalone Job Request Form service in **Java 17 (Spring Boot 3.3)** bridging directly into a legacy Java 7/8 ERP database. Implemented optimistic concurrency controls (`@Version`) to guarantee zero write collisions across concurrent branch operations.
-- **EDT Freeze Elimination:** Eliminated legacy Swing transaction and reporting freezes by enforcing strict `AutoCloseable` session lifecycles, background worker isolation, and optimized indexed SQL execution.
-- **Algorithmic Inventory Engine (ROQ):** Developed automated reorder quantity calculation (`AMC × [ABC - SM]`) with day-anchored rolling windows across branch dealerships, systematically reducing stockout hazards.
-- **Multi-Branch Concurrency Guards:** Engineered out-of-stock guard restrictions and transactional locks for cross-store transfers (`Viajero ↔ Jicjam`), stopping multi-store race conditions.
-- **FACC ↔ ACC Accounting Bridge:** Designed a bidirectional inter-module accounting adapter with in-memory caching (`HashMap`), locked payroll queues, and reusable transaction components.
+## Get in touch
 
----
-
-### Shipped Systems & Core Work
-
-| System | Role & Architecture | Status & Links |
-| :--- | :--- | :--- |
-| **Espasyo (Rent-a-Box Ledger)** | **Offline-First Retail POS & Ledger:** Flutter mobile application built with SQLite and BLoC architecture. Features automated seller payout reconciliation, rental unit audits, and 53 passing automated tests. | [![GitHub Repo](https://img.shields.io/badge/Code-Public_Repo-2563eb?style=flat-square&logo=github)](https://github.com/jiggy025/rent-a-box-sys) |
-| **Race Clock LED Wall PWA** | **Sub-5ms Timing Controller:** Real-time dual-screen PWA syncing director controls to live stage LED walls with under 5ms latency via high-frequency `localStorage` event bus and Screen WakeLock API. | [![Live PWA](https://img.shields.io/badge/Live-Vercel_PWA-10b981?style=flat-square)](https://race-clock-ten.vercel.app/) &nbsp; `Private System` |
-| **MIS Operations Calendar** | **Automated Dispatch Scheduler:** Enterprise operations scheduling engine powered by Supabase PostgreSQL. Dispatches automated daily 07:30 cron briefings (`pg_cron`) directly to corporate Viber channels. | [![Live App](https://img.shields.io/badge/Live-Netlify_App-10b981?style=flat-square)](https://codexus-calendar.netlify.app) &nbsp; `Private System` |
-| **Langga Loan Tracker** | **Financial Amortization Ledger:** React Native & Expo mobile ledger featuring fluid 60 FPS Reanimated spring interactions and zero-latency local state persistence. | [![Portfolio Case](https://img.shields.io/badge/Case_Study-Portfolio-6366f1?style=flat-square)](https://jiggy-portfolio.vercel.app/#work) &nbsp; `Internal System` |
-
----
-
-### Technical Arsenal
-
-```
-Backend & Enterprise  ──  Java (17 / 21 / 8), Spring Boot 3.3, Hibernate/JPA, JDBC, JasperReports, Java RMI, Java Swing
-Mobile & Frontend     ──  Flutter, Dart, SQLite, BLoC Architecture, React Native (Expo), TypeScript, Vite, PWA
-Databases & Cloud     ──  PostgreSQL, MySQL, SQLite, Supabase (pg_cron, Edge Functions)
-Systems Engineering   ──  Optimistic Concurrency Control, EDT Thread Isolation, Event-Driven Sync, Local-First Architecture
-```
-
----
-
-<div align="center">
-
-📍 **General Santos City, Philippines** &bull; [jigspals025@gmail.com](mailto:jigspals025@gmail.com) &bull; [jiggy-portfolio.vercel.app](https://jiggy-portfolio.vercel.app)
-
-</div>
+Open to engineering roles in General Santos City and remote (UTC+8).
+Email **[jigspals025@gmail.com](mailto:jigspals025@gmail.com)** or see the work at **[jiggy-portfolio.vercel.app](https://jiggy-portfolio.vercel.app)**.
